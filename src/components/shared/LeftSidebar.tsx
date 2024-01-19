@@ -36,15 +36,12 @@ const LeftSideBar = () => {
 
   ]
   const handleClick=() => {
-    setChats((oldChats: any) => [...oldChats, {
-      img:<BsPersonAdd/>,
-      title: "Upgrade to Plus"
-    },]);
+    setChats((oldChats: any) => [...oldChats, "Upgrade to Plus"]);
   }
   return (
     <div className='leftsidebar'>
       <div className=" border-2 border-gray-200 rounded-md w-full h-full flex flex-col flex-start p-4">
-        <div onClick={handleClick} className='w-full border-[#8191C9FF] rounded-md border-2 text-center p-2 cursor-pointer'>
+        <div onClick={handleClick}className='w-full border-[#8191C9FF] rounded-md border-2 text-center p-2 cursor-pointer'>
           <p>+ New Chat</p>
         </div>
         <div className='flex p-2 space-x-2 flex-center cursor-pointer'>
