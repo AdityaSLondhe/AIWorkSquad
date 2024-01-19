@@ -36,7 +36,10 @@ const LeftSideBar = () => {
 
   ]
   const handleClick=() => {
-    // const message=
+    setChats((oldChats: any) => [...oldChats, {
+      img:<BsPersonAdd/>,
+      title: "Upgrade to Plus"
+    },]);
   }
   return (
     <div className='leftsidebar'>

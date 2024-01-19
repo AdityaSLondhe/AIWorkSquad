@@ -25,11 +25,11 @@ const Home:React.FC<HomeProps> = ({user}) => {
   }])
 
   const handleClick=()=>{
-    const val = document.getElementById("input_text")?.value;
+    const val = (document.getElementById("input_text") as HTMLInputElement)?.value;
     console.log(val)
     if(!!val){
-      setMessagges(oldMessages=>[...oldMessages , {from:"user",text:val? val:""}])
-      document.getElementById("input_text")!.value = "";
+      setMessagges((oldMessages: any) => [...oldMessages, { from: "user", text: val ? val : "" }]);
+      (document.getElementById("input_text") as HTMLInputElement).value = "";
     }
   }
   return (
